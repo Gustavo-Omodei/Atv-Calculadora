@@ -1,0 +1,37 @@
+#resultado {
+  background: linear-gradient(to right top, #622640, #2d1342); ;
+  min-height: 20%;  
+  
+}
+h1 {
+  margin: 0;
+  text-align: right;
+  font-size: 300%;
+  padding-top: 20%;
+  padding-right:15%;
+}
+#container {
+  
+  display: flex;/*espaçamento*/
+  flex-direction: column;/*coluna*/
+  align-items: center; /* numero no meio */
+  
+  
+  height: 100vh; /*centralizaçao mais pra baixo*/
+  background: linear-gradient(to right top, #e04f60, #682664); /* Cor de fundo cinza claro */
+
+  ion-button {
+    font-size: 2em;
+    margin: 10px 0;
+    color: #ffff;
+  }
+  .botao-igual {
+    color: #fc7351;
+  }
+  .botao-c {
+    color: #fc7351;
+  }
+ 
+  
+
+}
