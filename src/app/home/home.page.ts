@@ -33,10 +33,12 @@ export class HomePage {
     } else if (!this.operadorSelecionado) {
       this.resultado = this.resultado === "0" ? valor : this.resultado + valor;
       this.primeiroElemento = this.resultado;
+
     } else {
       this.segundoElemento += valor;
       this.resultado += valor;
     }
+    
   }
 
   operador(operadorCalculadora: string) {
@@ -87,10 +89,30 @@ export class HomePage {
             this.resultado = Math.log10(primeiroNumero).toString();
             this.resultadoAnterior = this.resultado;
           break;
+          case ",":
+            
+
 
         }
         this.operadorSelecionado = false;
         this.segundoElemento = "";
+  }
+
+  apagarUltimoDigito() {
+    if (this.resultadoAnterior !== "") {
+      this.resultado = this.resultadoAnterior;
+      this.resultadoAnterior = "";
+      this.operadorSelecionado = false;
+      this.segundoElemento = "";
+    } else {
+      this.resultado = this.resultado.slice(0, -1);
+      
+      if (this.operadorSelecionado) {
+        this.segundoElemento = this.resultado.slice(this.primeiroElemento.length);
+      } else {
+        this.primeiroElemento = this.resultado;
+      }
+    }
   }
 
   redefinir() {
@@ -105,4 +127,5 @@ export class HomePage {
   raizQuadrada(numero: number): string {
     return Math.sqrt(numero).toString();
   }
+  
 }
