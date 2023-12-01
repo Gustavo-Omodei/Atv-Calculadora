@@ -5,7 +5,11 @@
 <div id="resultado">
     <h1>{{resultado}}</h1>
   </div>
+  
+  
     <div id="container">
+        
+            
     <ion-grid> 
       <ion-row>
         <ion-col>
@@ -100,9 +104,19 @@
                 </ion-button>
             </ion-col>
             <ion-col>
-              <ion-button fill="clear" class="botao-igual"  (click)="calcular()" >
-                  =
-              </ion-button>
+                <ion-button fill="clear" class="backspace" (click)="apagarUltimoDigito()">
+                    ⌫
+                  </ion-button>
+            </ion-col>
+        
+        </ion-row>
+        <ion-row>
+            
+
+            <ion-col>
+                <ion-button fill="clear" class="botao-igual"  (click)="calcular()" >
+                    =
+                </ion-button>
             </ion-col>
         </ion-row>
     </ion-grid>
